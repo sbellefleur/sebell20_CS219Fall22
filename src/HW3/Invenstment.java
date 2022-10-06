@@ -18,6 +18,11 @@ public class Invenstment {
         Scanner kbd = new Scanner(System.in);
 
         System.out.print("How much is the initial investment?: ");
+        if (!kbd.hasNextDouble()){
+            System.out.printf("Initial deposit should be greater than zero. You entered \"%s\"",
+                kbd.next());
+            System.exit(-1);
+        }
         double c = kbd.nextDouble();
 
         if (c < 0) {
@@ -27,6 +32,11 @@ public class Invenstment {
         }
 
         System.out.printf("What is the interest rate? ");
+        if (!kbd.hasNextDouble()){
+            System.out.printf("Initial deposit should be greater than zero. You entered \"%s\"",
+                    kbd.next());
+            System.exit(-1);
+        }
         double r = kbd.nextDouble();
 
         if (r < 0 || r > 1){
@@ -35,6 +45,11 @@ public class Invenstment {
             System.exit(-1);
         }
         System.out.printf("For how many years will the money be invested? ");
+        if (!kbd.hasNextDouble()){
+            System.out.printf("Initial deposit should be greater than zero. You entered \"%s\"",
+                    kbd.next());
+            System.exit(-1);
+        }
         double t = kbd.nextDouble();
 
         if (t<0 || t%1!=0){
@@ -42,7 +57,13 @@ public class Invenstment {
                     t);
             System.exit(-1);
         }
+
         System.out.printf("How many times will the interest be compounded? ");
+        if (!kbd.hasNextDouble()){
+            System.out.printf("Initial deposit should be greater than zero. You entered \"%s\"",
+                    kbd.next());
+            System.exit(-1);
+        }
         double n = kbd.nextDouble();
 
         if (n<0 || n%1!=0 ){
