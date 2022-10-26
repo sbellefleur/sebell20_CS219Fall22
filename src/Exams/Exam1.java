@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Exam1 {
 
-    public static int btwTwoAndSeven(double n) {
+    public static int btwTwoAndSeven(int n) {
         int count = 0;
         while (n != 0) {
-            double g = n % 10;
+            int g = n % 10;
             if (g > 2 && g < 7) {
                 count++;
             }
@@ -16,7 +16,27 @@ public class Exam1 {
         return count;
     }
 
-    public static double getN(Scanner n) {
+    public static int getN(Scanner n){
+        boolean valid = false;
+        int N = 0;
+        while(!valid){
+            System.out.print("Enter an integer: ");
+            if (n.hasNextInt()){
+                N=n.nextInt();
+                if (N<0){
+                    System.out.printf("Error: the number cannot be negative. You entered %.2f", N, ".Please" +
+                            "enter a whole number.");
+                    System.out.println();
+                }else{
+                    valid = true;
+                }
+            }else{
+                System.out.printf("Error: Please enter a whole number. You entered \"%s\"" ,n.next(),"\n");
+            }
+        }
+        return N;
+    }
+   /* public static double getN(Scanner n) {
         boolean valid = false;
         double N = 0;
         while (!valid) {
@@ -43,13 +63,16 @@ public class Exam1 {
         return N;
     }
 
+    */
+
     public static void main(String [] args){
 
         Scanner n = new Scanner(System.in);
 
-        double N = getN(n);
+        int N = getN(n);
 
         System.out.println(btwTwoAndSeven(N));
+
 
     }
 
