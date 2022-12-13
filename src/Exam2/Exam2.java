@@ -1,4 +1,4 @@
-package Exam2;
+/*package Exam2;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -25,26 +25,28 @@ public class Exam2 {
         String[] words = new String[n];
 
         int i = 0;
-        while (s.hasNextLine()) {
+        /*while (s.hasNextLine()) {
             words[i++] = s.nextLine();
         }
 
-        String [] palindromes = new String [n];
-        n=0;
-        while (s.hasNextLine()){
-            if (isPalindrome2(words[i])==true){
-                palindromes[n] = words [i];
-                n++;
-                i++;
+
+
+            String[] palindromes = new String[n];
+            n = 0;
+            while (s.hasNextLine()) {
+                if (isPalindrome2(words[i])) {
+                    palindromes[n] = words[i];
+                    n++;
+                    i++;
+                } else
+                    i++;
             }
-            else
-                i++;
-        }
+
         for (int i =0; i< palindromes.length; i++)
             for(int j = 0; j < palindromes.length -1; j++)
-                if (palindromes[i] < palindromes[j]){
+                if (palindromes[i].compareTo( palindromes[j])<0){
                     String temp = palindromes [i];
-                    palindromes [i] = palindromes [j]
+                    palindromes [i] = palindromes [j];
 
 
                 }
@@ -57,7 +59,7 @@ public class Exam2 {
         else return (s.charAt(0) == s.charAt(s.length() - 1)) &&
                 isPalindrome2(s.substring(1, s.length() - 1));
     }
-    /*public static String [] sort(String [] aos){
+    public static String [] sort(String [] aos){
         for(int i = 0; i < aos.length; i++){
             int j = smallest_loc(i, aoi);
             int temp = aos[i];
@@ -67,11 +69,18 @@ public class Exam2 {
         return aos;
     }
 
-     */
+// import reverse array
 
     public static void main(String[] args) {
-        String [] words = load_words("http://10.60.15.25/~ehar/cs219/wordle-nyt-solutions.txt", 2800);
+        String [] words = load_words("http://10.60.15.25/~ehar/cs219/wordle-nyt-solutions.txt", 9);
         System.out.println(words);
 
     }
 }
+
+ */
+
+
+
+
+

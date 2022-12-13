@@ -9,5 +9,15 @@ public class Main {
         System.out.println(z2);
 
         Database db = new Database();
+        System.out.println(db.findbyZip("03894"));
+        System.out.println(db.findbyZip("hello"));
+
+        System.out.println(db.search("13617"));
+        System.out.println(db.search("43221"));
+
+        WeatherObservation wob = db.search("13617").getWeatherData();
+        System.out.println(wob);
+
+        return;
     }
 }
